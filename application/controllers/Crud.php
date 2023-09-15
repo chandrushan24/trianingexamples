@@ -14,6 +14,7 @@ class Crud extends CI_Controller
          $this->load->helper('url');
         }
         
+        
         public function savedata()
         {
         $this->load->view('insert');
