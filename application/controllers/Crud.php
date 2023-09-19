@@ -20,9 +20,14 @@ class Crud extends CI_Controller
         $this->load->view('insert');
         if($this->input->post('save')){
              $data['student_id']=$this->input->post('student_id');
-             $data['student_name']=$this->input->post('student_name');
+             $data['student_name']=$this->input->post('stu_name');
              $data['student_age']=$this->input->post('student_age');
-             $data['student_gender']=$this->input->post('student_gender'); 
+             $data['student_gender']=$this->input->post('student_gender');
+             $data['email']=$this->input->post('email'); 
+             $data['address']=$this->input->post('address'); 
+             $data['phno']=$this->input->post('phno'); 
+             
+
              $response = $this->crud_model->saverecords($data);
              if($response==true){
                 echo "Inserted succesffully"; 
